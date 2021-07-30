@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "digiboardFrontend"
+  "defaultProject": "digiboardFrontend",
+  "cli": {
+    "analytics": false
+  }
 }
