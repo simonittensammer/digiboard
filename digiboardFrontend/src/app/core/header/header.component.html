@@ -1,1 +1,25 @@
-<p>header works!</p>
+<div class="header">
+  <div *ngIf="auth.user$ | async; then loggedin else loggedout">
+    <!-- template will replace this div -->
+  </div>
+</div>
+
+<ng-template #loggedout>
+  <button mat-raised-button color="primary" (click)="auth.googleSignin()">
+    <fa-icon [icon]="['fab', 'google']"></fa-icon>
+    &nbsp;
+    Login
+  </button>
+</ng-template>
+
+<ng-template #loggedin>
+  <button mat-raised-button color="primary" (click)="auth.signOut()">
+    <fa-icon [icon]="['fab', 'google']"></fa-icon>
+    &nbsp;
+    Logout
+  </button>
+
+  <div class="picContainer">
+    <img [src]="user.photoURL">
+  </div>
+</ng-template>

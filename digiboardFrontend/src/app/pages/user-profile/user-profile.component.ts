@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
-import {faGoogle} from '@fortawesome/free-brands-svg-icons';
-import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import {User} from '../../models/user';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,12 +9,16 @@ import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor(public auth: AuthService,
-              library: FaIconLibrary) {
-    library.addIcons(faGoogle);
-  }
+  public user: User;
+
+  constructor(
+    public auth: AuthService
+  ) { }
 
   ngOnInit(): void {
+    this.auth.user$.subscribe(data => {
+      this.user = data;
+    });
   }
 
 }

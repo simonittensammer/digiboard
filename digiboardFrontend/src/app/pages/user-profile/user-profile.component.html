@@ -17,17 +17,15 @@
 
 <!-- User logged in -->
 <ng-template #loggedin>
-  <div *ngIf="auth.user$ | async as user">
-    <h3>Logged in as {{ user.displayName }}</h3>
-    <img [src]="user.photoURL"><br>
-    <button mat-raised-button color="primary" (click)="auth.signOut()">
-      <fa-icon [icon]="['fab', 'google']"></fa-icon>
-      &nbsp;
-      Logout
-    </button>
+  <h1>Welcome {{ user.displayName }}!</h1>
+<!--  <img [src]="user.photoURL"><br>-->
+<!--  <button mat-raised-button color="primary" (click)="auth.signOut()">-->
+<!--    <fa-icon [icon]="['fab', 'google']"></fa-icon>-->
+<!--    &nbsp;-->
+<!--    Logout-->
+<!--  </button>-->
+<!--  <br><br>-->
 
-    <br><br>
-    <h3>You can now start using DigiBoard</h3>
-    <button mat-raised-button color="primary" routerLink="test">Start using</button>
-  </div>
+  <h3>You can now start using DigiBoard</h3>
+  <button mat-raised-button color="primary" routerLink="test">Start using</button>
 </ng-template>

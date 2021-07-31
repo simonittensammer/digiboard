@@ -12,3 +12,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='35px' width='35px'><text x='0' y='15' fill='darkgrey' font-size='1rem'>.</text></svg>");
 }
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  height: 45px;
+
+  > * {
+    float: right;
+    height: 100%;
+    margin-right: 15px;
+  }
+}
