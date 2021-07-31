@@ -1,21 +1,33 @@
-<div *ngIf="auth.user$ | async; then authenticated else guest">
-  <!-- template will replace this div -->
+<div class="content">
+  <div *ngIf="auth.user$ | async; then loggedin else loggedout">
+    <!-- template will replace this div -->
+  </div>
 </div>
 
 <!-- User NOT logged in -->
-<ng-template #guest>
-  <h3>Welcome to DigiBoard</h3>
+<ng-template #loggedout>
+  <h1>Welcome to DigiBoard</h1>
 
-  <button (click)="auth.googleSignin()">
+  <button mat-raised-button color="primary" (click)="auth.googleSignin()">
+    <fa-icon [icon]="['fab', 'google']"></fa-icon>
+    &nbsp;
     Login using Google
   </button>
 </ng-template>
 
 <!-- User logged in -->
-<ng-template #authenticated>
+<ng-template #loggedin>
   <div *ngIf="auth.user$ | async as user">
     <h3>Logged in as {{ user.displayName }}</h3>
-    <img [src]="user.photoURL">
-    <button (click)="auth.signOut()">Logout</button>
+    <img [src]="user.photoURL"><br>
+    <button mat-raised-button color="primary" (click)="auth.signOut()">
+      <fa-icon [icon]="['fab', 'google']"></fa-icon>
+      &nbsp;
+      Logout
+    </button>
+
+    <br><br>
+    <h3>You can now start using DigiBoard</h3>
+    <button mat-raised-button color="primary" routerLink="test">Start using</button>
   </div>
 </ng-template>

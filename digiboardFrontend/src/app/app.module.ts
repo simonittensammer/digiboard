@@ -11,6 +11,9 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
 import { TestComponent } from './pages/test/test.component';
 import {AuthGuard} from './guards/auth.guard';
 import { environment } from '../environments/environment';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const config = environment.config;
 
@@ -26,6 +29,9 @@ const config = environment.config;
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    FontAwesomeModule
   ],
   providers: [
     AuthGuard
