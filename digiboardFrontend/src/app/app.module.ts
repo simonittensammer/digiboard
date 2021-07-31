@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderComponent } from './core/header/header.component';
 
 const config = environment.config;
 
@@ -21,7 +22,8 @@ const config = environment.config;
   declarations: [
     AppComponent,
     UserProfileComponent,
-    TestComponent
+    TestComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
