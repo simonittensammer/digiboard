@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {UserProfileComponent} from './pages/user-profile/user-profile.component';
-import {TestComponent} from './pages/test/test.component';
 import {AuthGuard} from './guards/auth.guard';
-import {PinboardsComponent} from "./pages/pinboards/pinboards.component";
+import {PinboardsComponent} from './pages/pinboards/pinboards.component';
+import {LandingPageComponent} from './pages/landing-page/landing-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: UserProfileComponent
+    component: LandingPageComponent
   },
   {
     path: 'pinboards',

@@ -3,6 +3,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.logoFont {
+  font-family: 'Patua One', cursive;
+}
+
 .content {
   width: 100vw;
   height: 100vh;
@@ -25,4 +29,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 100%;
     margin-right: 15px;
   }
+}
+
+p {
+  color: #333;
 }
