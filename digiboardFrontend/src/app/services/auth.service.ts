@@ -4,8 +4,8 @@ import {User} from '../models/user';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {Router} from '@angular/router';
-import {switchMap} from "rxjs/operators";
-import firebase from "firebase";
+import {switchMap} from 'rxjs/operators';
+import firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
