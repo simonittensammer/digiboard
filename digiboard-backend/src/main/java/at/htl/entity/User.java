@@ -2,6 +2,7 @@ package at.htl.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class User extends PanacheEntityBase {
     String photoURL;
     String displayName;
 
+    @JsonbTransient
     @OneToMany
     List<Pinboard> pinboards;
 

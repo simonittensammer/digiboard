@@ -2,6 +2,7 @@ package at.htl.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Pinboard extends PanacheEntityBase {
     Long id;
     String name;
 
+    @JsonbTransient
     @OneToMany
     List<Note> notes;
 
