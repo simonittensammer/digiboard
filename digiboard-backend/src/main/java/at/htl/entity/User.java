@@ -12,9 +12,6 @@ import java.util.List;
 public class User extends PanacheEntityBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-
     String uid;
     String email;
     String photoURL;
@@ -35,9 +32,9 @@ public class User extends PanacheEntityBase {
         this.pinboards = new ArrayList<>();
     }
 
-    public Long getId() {
-        return id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
 
 //    public void setId(Long id) {
 //        this.id = id;

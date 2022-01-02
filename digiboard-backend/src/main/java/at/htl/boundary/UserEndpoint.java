@@ -36,14 +36,14 @@ public class UserEndpoint {
 
     @GET
     @Path("/{id}")
-    public User getUser(@PathParam("id") Long id) {
-        return ur.findById(id);
+    public User getUser(@PathParam("id") String id) {
+        return ur.find("uid", id).firstResult();
     }
 
     @GET
     @Path("/{id}/pinboards")
-    public List<Pinboard> getPinboards(@PathParam("id") Long id) {
-        return new ArrayList<>(ur.findById(id).getPinboards());
+    public List<Pinboard> getPinboards(@PathParam("id") String id) {
+        return new ArrayList<>(ur.find("uid", id).firstResult().getPinboards());
     }
 
     @POST
@@ -55,8 +55,8 @@ public class UserEndpoint {
     @POST
     @Transactional
     @Path("/{id}/pinboard")
-    public Response addPinboard(@PathParam("id") Long id, Pinboard pinboard) {
-        User user = ur.findById(id);
+    public Response addPinboard(@PathParam("id") String id, Pinboard pinboard) {
+        User user = ur.find("uid", id).firstResult();
         user.addPinboard(pinboard);
         return Response.ok().build();
     }
