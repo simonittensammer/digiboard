@@ -21,7 +21,7 @@ public class User extends PanacheEntityBase {
     String displayName;
 
     @JsonbTransient
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<Pinboard> pinboards;
 
     public User() {

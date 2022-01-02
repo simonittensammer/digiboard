@@ -17,7 +17,7 @@ public class Pinboard extends PanacheEntityBase {
     String name;
 
     @JsonbTransient
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<Note> notes;
 
     public Pinboard() {
