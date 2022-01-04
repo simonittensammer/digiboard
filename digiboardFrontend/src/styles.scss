@@ -23,6 +23,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   right: 0;
   padding: 15px;
   height: 40px;
+  z-index: 200;
 
   > * {
     float: right;

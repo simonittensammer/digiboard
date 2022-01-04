@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../services/http.service';
 import {User} from '../../models/user';
 import {AuthService} from '../../services/auth.service';
+import {Pinboard} from '../../models/pinboard';
 
 @Component({
   selector: 'app-pinboards',
@@ -9,6 +10,7 @@ import {AuthService} from '../../services/auth.service';
   styleUrls: ['./pinboards.component.scss']
 })
 export class PinboardsComponent implements OnInit {
+  private pinboard: Pinboard;
 
   constructor(
     private auth: AuthService,
@@ -23,11 +25,13 @@ export class PinboardsComponent implements OnInit {
           this.httpService.getPinboards(data2.uid).subscribe(data3 => {
             data2.pinboards = data3;
             this.httpService.user = data2;
-            console.log(this.httpService.user);
           });
         });
       }
     });
   }
 
+  selectPinboard(selectedPinboard): void {
+    this.pinboard = selectedPinboard;
+  }
 }
