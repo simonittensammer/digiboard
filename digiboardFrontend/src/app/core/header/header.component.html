@@ -1,5 +1,5 @@
 <div class="header">
-  <div *ngIf="auth.user$ | async; then loggedin else loggedout">
+  <div *ngIf="auth.userObservable | async; then loggedin else loggedout">
     <!-- template will replace this div -->
   </div>
 </div>
@@ -20,6 +20,6 @@
   </button>
 
   <div class="picContainer">
-    <img [src]="user.photoURL">
+    <img [src]="httpService.user?.photoURL">
   </div>
 </ng-template>

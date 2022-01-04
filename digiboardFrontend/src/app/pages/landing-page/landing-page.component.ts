@@ -16,7 +16,7 @@ export class LandingPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.auth.user$.subscribe(data => {
+    this.auth.userObservable.subscribe(data => {
       this.user = data;
     });
   }

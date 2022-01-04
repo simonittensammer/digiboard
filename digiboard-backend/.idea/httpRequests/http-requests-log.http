@@ -1,3 +1,12 @@
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
 GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
 
 <> 2022-01-04T215422.200.json
@@ -431,10 +440,6 @@ Content-Type: application/json
 {
   "name": "Work Notes"
 }
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
 
 ###
 

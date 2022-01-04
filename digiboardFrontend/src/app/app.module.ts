@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './core/header/header.component';
 import { PinboardsComponent } from './pages/pinboards/pinboards.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 const config = environment.config;
 
@@ -27,6 +28,7 @@ const config = environment.config;
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,

@@ -6,20 +6,22 @@ import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestor
 import {Router} from '@angular/router';
 import {switchMap} from 'rxjs/operators';
 import firebase from 'firebase';
+import {HttpService} from "./http.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  user$: Observable<User>;
+  userObservable: Observable<User>;
 
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
-    private router: Router
+    private router: Router,
+    private httpService: HttpService
   ) {
-    this.user$ = this.afAuth.authState.pipe(
+    this.userObservable = this.afAuth.authState.pipe(
       switchMap(user => {
         // Logged in
         if (user) {
@@ -47,7 +49,8 @@ export class AuthService {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
-      photoURL: user.photoURL
+      photoURL: user.photoURL,
+      pinboards: []
     };
 
     return userRef.set(data, {merge: true});

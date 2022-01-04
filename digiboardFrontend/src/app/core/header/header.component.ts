@@ -3,6 +3,7 @@ import {AuthService} from '../../services/auth.service';
 import {User} from '../../models/user';
 import {faGoogle} from '@fortawesome/free-brands-svg-icons';
 import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import {HttpService} from "../../services/http.service";
 
 @Component({
   selector: 'app-header',
@@ -11,20 +12,15 @@ import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
 })
 export class HeaderComponent implements OnInit {
 
-  public user: User;
-
   constructor(
     public auth: AuthService,
+    public httpService: HttpService,
     library: FaIconLibrary
   ) {
     library.addIcons(faGoogle);
   }
 
   ngOnInit(): void {
-    this.auth.user$.subscribe(data => {
-      this.user = data;
-      console.log(this.user)
-    });
   }
 
 }
