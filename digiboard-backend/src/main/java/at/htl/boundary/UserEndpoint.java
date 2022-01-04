@@ -3,18 +3,15 @@ package at.htl.boundary;
 import at.htl.control.UserRepository;
 import at.htl.entity.Pinboard;
 import at.htl.entity.User;
-import org.hibernate.Hibernate;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.json.JsonObject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Path("user")
 @ApplicationScoped
@@ -50,6 +47,31 @@ public class UserEndpoint {
     public Response addUser(User user) {
         ur.persist(user);
         return Response.ok(user).build();
+    }
+
+    @POST
+    @Path("/login")
+    public Response login(User loginUser) {
+        User user = ur.find("uid", loginUser.getUid()).firstResult();
+
+        if (user == null) {
+            User newUser = new User(
+                    loginUser.getUid(),
+                    loginUser.getEmail(),
+                    loginUser.getPhotoURL(),
+                    loginUser.getDisplayName()
+            );
+
+            Pinboard pinboard = new Pinboard("My Notes");
+
+            newUser.addPinboard(pinboard);
+            ur.persist(newUser);
+
+            return Response.ok(newUser).build();
+
+        }
+
+        return Response.ok(ur.find("uid", loginUser.getUid()).firstResult()).build();
     }
 
     @POST

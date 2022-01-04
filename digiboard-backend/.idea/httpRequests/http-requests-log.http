@@ -1,5 +1,370 @@
 GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
 
+<> 2022-01-04T215422.200.json
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T215416.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T215411.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T215405.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T215313.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T215308.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T192624.200.json
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T192619.200.json
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T192611.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T192603.200.json
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2022-01-04T192559.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T192519.200.json
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T192512.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T192503.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T192457.200.json
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2022-01-04T192447.200.json
+
+###
+
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T192442.200.json
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2022-01-04T192427.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T192148.500.html
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2022-01-04T192143.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T192007.500.html
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
+
+<> 2022-01-04T191924.200.json
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2022-01-04T191915.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T191907.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T191840.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
+
+<> 2022-01-04T191835.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
+
+<> 2022-01-04T191829.200.json
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T191823.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
+<> 2022-01-04T191022.200.json
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2022-01-04T191012.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
+
+<> 2022-01-04T191007.200.json
+
+###
+
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T190954.500.html
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2022-01-04T190945.200.json
+
+###
+
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-04T190935.200.json
+
+###
+
+GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
+
 <> 2022-01-02T163105.200.json
 
 ###
@@ -70,399 +435,6 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-02T162641.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T162633.200.json
-
-###
-
-GET http://localhost:8080/user/1/pinboards
-
-<> 2022-01-02T162118.200.json
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T162111.200.json
-
-###
-
-GET http://localhost:8080/user/1/pinboards
-
-<> 2022-01-02T162031.200.json
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "School Notes"
-}
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T162008.200.json
-
-###
-
-GET http://localhost:8080/user/1/pinboards
-
-<> 2022-01-02T161733.500.html
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T161715.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T161712.200.json
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T161550.200.json
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T161511.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T161504.200.json
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-<> 2022-01-02T161355.500.html
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T161352.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T161350.200.json
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-<> 2022-01-02T161141.500.html
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T161137.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T161134.200.json
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-<> 2022-01-02T160932.500.html
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T160928.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T160925.200.json
-
-###
-
-POST http://localhost:8080/user/1/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-<> 2022-01-02T160825.500.html
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T160820.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T160814.200.json
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T160408.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-02T160404.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T160357.200.json
-
-###
-
-GET http://localhost:8080/user/1
-
-<> 2022-01-02T160207.500.html
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T160203.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T160159.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-02T160146.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-02T155408.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T155404.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-02T155356.200.json
 
 ###
 
