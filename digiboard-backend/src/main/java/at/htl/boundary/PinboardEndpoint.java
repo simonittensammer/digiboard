@@ -12,6 +12,7 @@ import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("pinboard")
@@ -33,6 +34,12 @@ public class PinboardEndpoint {
     @Path("/{id}")
     public Pinboard getPinboard(@PathParam("id") Long id) {
         return pr.findById(id);
+    }
+
+    @GET
+    @Path("/{id}/notes")
+    public List<Note> getNotesByPinboardId(@PathParam("id") Long id) {
+        return new ArrayList<>(pr.findById(id).getNotes());
     }
 
     @POST

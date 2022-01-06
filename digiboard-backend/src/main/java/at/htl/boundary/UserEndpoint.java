@@ -36,7 +36,7 @@ public class UserEndpoint {
 
     @GET
     @Path("/{id}/pinboards")
-    public List<Pinboard> getPinboards(@PathParam("id") String id) {
+    public List<Pinboard> getPinboardsByUserId(@PathParam("id") String id) {
         return new ArrayList<>(ur.find("uid", id).firstResult().getPinboards());
     }
 

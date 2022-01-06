@@ -18,3 +18,5 @@ Content-Type: application/json
 }
 
 ###
+
+GET http://localhost:8080/pinboard/1/notes
