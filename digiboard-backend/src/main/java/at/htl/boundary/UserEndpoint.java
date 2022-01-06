@@ -25,9 +25,6 @@ public class UserEndpoint {
 
     @GET
     public List<User> getAll() {
-//        return ur.streamAll().peek(o -> {
-//            Hibernate.initialize(o.getPinboards());
-//        }).collect(Collectors.toList());
         return ur.listAll();
     }
 
