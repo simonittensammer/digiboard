@@ -10,7 +10,8 @@ import {Pinboard} from '../../models/pinboard';
   styleUrls: ['./pinboards.component.scss']
 })
 export class PinboardsComponent implements OnInit {
-  private pinboard: Pinboard;
+
+  public pinboard: Pinboard;
 
   constructor(
     private auth: AuthService,
@@ -22,9 +23,10 @@ export class PinboardsComponent implements OnInit {
     this.auth.userObservable.subscribe(data => {
       if (data) {
         this.httpService.login(data).subscribe(data2 => {
-          this.httpService.getPinboards(data2.uid).subscribe(data3 => {
+          this.httpService.getPinboardsByUserId(data2.uid).subscribe(data3 => {
             data2.pinboards = data3;
             this.httpService.user = data2;
+            this.pinboard = this.httpService.user.pinboards[0];
           });
         });
       }
@@ -33,5 +35,8 @@ export class PinboardsComponent implements OnInit {
 
   selectPinboard(selectedPinboard): void {
     this.pinboard = selectedPinboard;
+    this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data => {
+      this.pinboard
+    })
   }
 }

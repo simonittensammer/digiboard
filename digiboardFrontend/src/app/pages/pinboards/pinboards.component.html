@@ -1,5 +1,5 @@
 <div class="content">
-  <h1>Pinboards</h1>
+  <h1><span class="logoFont">{{ pinboard?.name }}</span></h1>
 
   <div class="pinboardList">
     <button class="pinboardButton" *ngFor="let pinboard of httpService.user?.pinboards" (click)="selectPinboard(pinboard)">
