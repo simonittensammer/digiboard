@@ -1,3 +1,74 @@
+GET http://localhost:8080/pinboard/1
+
+<> 2022-01-06T182402.200.json
+
+###
+
+GET http://localhost:8080/pinboard/1
+
+<> 2022-01-06T182356.200.json
+
+###
+
+GET http://localhost:8080/pinboard/2
+
+<> 2022-01-06T182352.200.json
+
+###
+
+GET http://localhost:8080/pinboard/1
+
+<> 2022-01-06T182347.200.json
+
+###
+
+GET http://localhost:8080/pinboard/1
+
+<> 2022-01-06T182345.200.json
+
+###
+
+GET http://localhost:8080/pinboard
+
+<> 2022-01-06T182335.200.json
+
+###
+
+GET http://localhost:8080/pinboard/1
+
+<> 2022-01-06T182325.200.json
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+  "email": "simon.ittensammer@gmail.com",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+  "displayName": "Simon Itti"
+}
+
+<> 2022-01-06T182316.200.json
+
+###
+
+GET http://localhost:8080/pinboard
+
+<> 2022-01-06T182247.200.json
+
+###
+
 GET http://localhost:8080/pinboard
 
 <> 2022-01-06T181642.200.json
@@ -345,88 +416,6 @@ Content-Type: application/json
 {
   "name": "Work Notes"
 }
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-04T191012.200.json
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
-
-<> 2022-01-04T191007.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T190954.500.html
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-04T190945.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T190935.200.json
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-02T163105.200.json
-
-###
-
-GET http://localhost:8080/user/1/pinboards
-
-<> 2022-01-02T163049.500.html
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
-
-<> 2022-01-02T163043.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-02T163038.200.json
 
 ###
 

@@ -8,10 +8,7 @@ import at.htl.entity.User;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -28,5 +25,11 @@ public class PinboardEndpoint {
     @GET
     public List<Pinboard> getAll() {
         return pr.listAll();
+    }
+
+    @GET
+    @Path("/{id}")
+    public Pinboard getPinboard(@PathParam("id") Long id) {
+        return pr.findById(id);
     }
 }

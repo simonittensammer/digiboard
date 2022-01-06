@@ -1,14 +1,14 @@
 ###
 
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
+#POST http://localhost:8080/user
+#Content-Type: application/json
+#
+#{
+#  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
+#  "email": "simon.ittensammer@gmail.com",
+#  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
+#  "displayName": "Simon Itti"
+#}
 
 ###
 
@@ -45,5 +45,3 @@ Content-Type: application/json
 GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
 
 ###
-
-GET http://localhost:8080/pinboard
