@@ -26,7 +26,7 @@ export class PinboardsComponent implements OnInit {
           this.httpService.getPinboardsByUserId(data2.uid).subscribe(data3 => {
             data2.pinboards = data3;
             this.httpService.user = data2;
-            this.pinboard = this.httpService.user.pinboards[0];
+            this.selectPinboard(this.httpService.user.pinboards[0]);
           });
         });
       }
@@ -36,7 +36,7 @@ export class PinboardsComponent implements OnInit {
   selectPinboard(selectedPinboard): void {
     this.pinboard = selectedPinboard;
     this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data => {
-      this.pinboard
-    })
+      this.pinboard.notes = data;
+    });
   }
 }

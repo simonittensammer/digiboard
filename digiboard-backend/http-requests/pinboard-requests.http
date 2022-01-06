@@ -10,7 +10,7 @@ POST http://localhost:8080/pinboard/1/note
 Content-Type: application/json
 
 {
-  "headline": "Work Notes",
+  "headline": "First Note",
   "text": "This is a simple Note",
   "posX": 10,
   "posY": 10,

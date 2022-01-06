@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../models/user';
 import {Pinboard} from "../models/pinboard";
+import {Note} from "../models/note";
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,11 @@ export class HttpService {
     return this.http.post<User>(this.SERVER_URL + 'user/login', loginUser);
   }
 
-  getPinboards(uid): Observable<Array<Pinboard>> {
+  getPinboardsByUserId(uid): Observable<Array<Pinboard>> {
     return this.http.get<Array<Pinboard>>(this.SERVER_URL + 'user/' + uid + '/pinboards');
+  }
+
+  getNotesByPinboardId(id): Observable<Array<Note>> {
+    return this.http.get<Array<Note>>(this.SERVER_URL + 'pinboard/' + id + '/notes');
   }
 }

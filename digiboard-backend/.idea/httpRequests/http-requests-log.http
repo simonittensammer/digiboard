@@ -1,3 +1,25 @@
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Work Notes"
+}
+
+###
+
 GET http://localhost:8080/pinboard/1/notes
 
 <> 2022-01-06T183832.200.json
@@ -412,19 +434,6 @@ Content-Type: application/json
 }
 
 <> 2022-01-04T192007.500.html
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
-
-<> 2022-01-04T191924.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-04T191915.200.json
 
 ###
 
