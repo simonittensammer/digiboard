@@ -3,3 +3,18 @@ GET http://localhost:8080/pinboard
 ###
 
 GET http://localhost:8080/pinboard/1
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "Work Notes",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###

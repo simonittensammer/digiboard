@@ -15,15 +15,17 @@ public class Note extends PanacheEntityBase {
     String text;
     double posX;
     double posY;
+    int priority;
 
     public Note() {
     }
 
-    public Note(String headline, String text, double posX, double posY) {
+    public Note(String headline, String text, double posX, double posY, int priority) {
         this.headline = headline;
         this.text = text;
         this.posX = posX;
         this.posY = posY;
+        this.priority = priority;
     }
 
     public Long getId() {
@@ -64,5 +66,13 @@ public class Note extends PanacheEntityBase {
 
     public void setPosY(double posY) {
         this.posY = posY;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
     }
 }
