@@ -18,6 +18,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import {HttpClientModule} from "@angular/common/http";
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatIconModule} from "@angular/material/icon";
+import {FormsModule} from "@angular/forms";
 
 const config = environment.config;
 
@@ -39,7 +40,8 @@ const config = environment.config;
     MatButtonModule,
     MatIconModule,
     DragDropModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [
     AuthGuard

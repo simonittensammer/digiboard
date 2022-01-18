@@ -17,6 +17,7 @@ export class PinboardsComponent implements OnInit {
   private newX: number;
   private newY: number;
   private preventSelection = false;
+  newPinboardName: string;
 
   constructor(
     private auth: AuthService,
@@ -94,5 +95,16 @@ export class PinboardsComponent implements OnInit {
       el = el.offsetParent;
     }
     return {top: y, left: x};
+  }
+
+  createPinboard(): void {
+    const newPinboard = new Pinboard(this.newPinboardName);
+    this.httpService.createPinboard(newPinboard).subscribe(data => {
+      this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
+        this.httpService.user.pinboards = data2;
+        this.pinboard = data;
+        this.newPinboardName = '';
+      });
+    });
   }
 }

@@ -32,4 +32,12 @@ export class HttpService {
   updateNote(note): Observable<Note> {
     return this.http.put<Note>(this.SERVER_URL + 'note', note);
   }
+
+  createPinboard(pinboard): Observable<Pinboard> {
+    return this.http.post<Pinboard>(this.SERVER_URL + 'user/' + this.user.uid + '/pinboard', pinboard);
+  }
+
+  addNote(pinboardId, note): Observable<Note> {
+    return this.http.post<Note>(this.SERVER_URL + 'pinboard/' + pinboardId + '/note', note);
+  }
 }

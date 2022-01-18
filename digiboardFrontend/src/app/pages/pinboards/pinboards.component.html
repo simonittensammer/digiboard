@@ -21,5 +21,9 @@
     <button class="pinboardButton" *ngFor="let pinboard of httpService.user?.pinboards" (click)="selectPinboard(pinboard)">
       {{ pinboard.name }}
     </button>
+
+    <input class="pinboardButton" type="text" name="newPinboard" placeholder="Create new"
+           [(ngModel)]="newPinboardName"
+           (focusout)="createPinboard()">
   </div>
 </div>
