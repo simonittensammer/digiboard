@@ -3,6 +3,7 @@ import {HttpService} from '../../services/http.service';
 import {User} from '../../models/user';
 import {AuthService} from '../../services/auth.service';
 import {Pinboard} from '../../models/pinboard';
+import {Note} from '../../models/note';
 
 @Component({
   selector: 'app-pinboards',
@@ -12,6 +13,7 @@ import {Pinboard} from '../../models/pinboard';
 export class PinboardsComponent implements OnInit {
 
   public pinboard: Pinboard;
+  public selectedNote: Note;
 
   constructor(
     private auth: AuthService,
@@ -38,5 +40,45 @@ export class PinboardsComponent implements OnInit {
     this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data => {
       this.pinboard.notes = data;
     });
+  }
+
+  selectNote(note: Note): void {
+    this.selectedNote = note;
+    console.log(this.selectedNote.id);
+  }
+
+  // deselectNote(): void {
+  //   this.updateNote(this.selectedNote);
+  //   this.selectedNote = null;
+  // }
+
+  updateNote(note: Note): void {
+    console.log('Update Note ' + note?.id);
+    this.httpService.updateNote(this.selectedNote).subscribe(data => {
+      this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data2 => {
+        this.pinboard.notes = data2;
+      });
+    });
+  }
+
+  onDragEnded(event): void {
+    const element = event.source.getRootElement();
+    const boundingClientRect = element.getBoundingClientRect();
+    const parentPosition = this.getPosition(element);
+    console.log('x: ' + (boundingClientRect.x - parentPosition.left), 'y: ' + (boundingClientRect.y - parentPosition.top));
+    this.selectedNote.posX = (boundingClientRect.x - parentPosition.left);
+    this.selectedNote.posY = (boundingClientRect.y - parentPosition.top);
+    this.updateNote(this.selectedNote);
+  }
+
+  getPosition(el) {
+    let x = 0;
+    let y = 0;
+    while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+      x += el.offsetLeft - el.scrollLeft;
+      y += el.offsetTop - el.scrollTop;
+      el = el.offsetParent;
+    }
+    return {top: y, left: x};
   }
 }

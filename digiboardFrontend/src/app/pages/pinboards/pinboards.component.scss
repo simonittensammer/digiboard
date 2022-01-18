@@ -1,33 +1,100 @@
-.pinboardList {
-  position: fixed;
-  right: 0;
+.notesWrapper {
+  position: absolute;
   top: 0;
-  padding-top: 100px;
-  width: 12.5vw;
-  min-width: 150px;
-  z-index: 100;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  float: left;
 }
 
-.pinboardButton {
-  width: 80%;
-  height: 45px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 12.5px 10%;
-  color: #333;
-  background: rgba(255, 255, 255, 1);
+.note {
+  width: fit-content;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
   box-shadow: 0 5px 10px #aaa;
-  border-radius: 9999px;
-  border: none;
-  cursor: pointer;
 
+  display: grid;
+  grid-template-columns: repeat(5, 2.5vw);
+  //grid-gap: 5px;
+  cursor: pointer;
   transition: all .1s ease;
 }
 
-.pinboardButton:hover {
+.note:active {
+  cursor: grabbing;
   box-shadow: 0 10px 15px #aaa;
 }
 
-.pinboardButton:active {
-  box-shadow: 0 5px 10px #aaa;
+.selectedNote {
+  box-shadow: 0 10px 15px #aaa;
 }
+
+.noteHeadline {
+  grid-column: 1 / 5;
+  font-size: .9rem;
+  font-weight: bolder;
+  padding: 0 15px;
+}
+
+.noteButton {
+}
+
+.noteText {
+  grid-column: 1 / 6;
+  resize: none;
+  font-size: .9rem;
+  line-height: 1.25rem;
+  padding: 10px 15px;
+  height: fit-content;
+}
+
+.noteHeadline, .noteText {
+  border: none;
+  outline: none;
+  transition: all .1s ease;
+  border-radius: 5px;
+}
+
+.noteHeadline:hover, .noteText:hover {
+  background: #ddd;
+}
+.noteHeadline:focus, .noteText:focus {
+  background: #eee;
+}
+
+
+  .pinboardList {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 100px;
+    width: 12.5vw;
+    min-width: 150px;
+    z-index: 100;
+  }
+
+  .pinboardButton {
+    width: 80%;
+    height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 12.5px 10%;
+    color: #333;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 10px #aaa;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+
+    transition: all .1s ease;
+  }
+
+  .pinboardButton:hover {
+    box-shadow: 0 10px 15px #aaa;
+  }
+
+  .pinboardButton:active {
+    box-shadow: 0 5px 10px #aaa;
+  }

@@ -11,6 +11,391 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:8080/pinboard
+
+<> 2022-01-18T210050.200.json
+
+###
+
+PUT http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+<> 2022-01-18T205934.200.json
+
+###
+
+PUT http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+<> 2022-01-18T205627.200.json
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+<> 2022-01-18T205623.500.html
+
+###
+
+PUT http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+<> 2022-01-18T205533.200.json
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+<> 2022-01-18T205416.500.html
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+<> 2022-01-18T205352.500.html
+
+###
+
+PUT http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+<> 2022-01-18T204910.200.json
+
+###
+
+PUT http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+<> 2022-01-18T204806.200.json
+
+###
+
+POST http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+###
+
+GET http://localhost:8080/pinboard/1/notes
+
+<> 2022-01-18T204114.200.json
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/2/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/2/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
+Content-Type: application/json
+
+{
+  "name": "Ilonas Pinboard"
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "Second Note",
+  "text": "This is a simple Note",
+  "posX": 900,
+  "posY": 500,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "Second Note",
+  "text": "This is a simple Note",
+  "posX": 50,
+  "posY": 300,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 1920,
+  "posY": 110,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 1000,
+  "posY": 110,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+<> 2022-01-07T190129.500.html
+
+###
+
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
 POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
 Content-Type: application/json
 
@@ -173,267 +558,6 @@ GET http://localhost:8080/pinboard
 GET http://localhost:8080/pinboard
 
 <> 2022-01-06T181642.200.json
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T215422.200.json
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T215416.200.json
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T215411.200.json
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T215405.200.json
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T215313.200.json
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T215308.200.json
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T192624.200.json
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T192619.200.json
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T192611.200.json
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T192603.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-04T192559.200.json
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T192519.200.json
-
-###
-
-POST http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboard
-Content-Type: application/json
-
-{
-  "name": "Work Notes"
-}
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
-
-<> 2022-01-04T192512.200.json
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T192503.200.json
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T192457.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-04T192447.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T192442.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-04T192427.200.json
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T192148.500.html
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2022-01-04T192143.200.json
-
-###
-
-GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-
-{
-  "uid": "XNVU0NfasfW6Iyehn5nXixODyHI2",
-  "email": "simon.ittensammer@gmail.com",
-  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjiF9Gc1oGk3K13IVEdMvmYGBzChmX4t3ayGvYkgg=s96-c",
-  "displayName": "Simon Itti"
-}
-
-<> 2022-01-04T192007.500.html
 
 ###
 

@@ -16,6 +16,8 @@ import { HeaderComponent } from './core/header/header.component';
 import { PinboardsComponent } from './pages/pinboards/pinboards.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import {DragDropModule} from "@angular/cdk/drag-drop";
+import {MatIconModule} from "@angular/material/icon";
 
 const config = environment.config;
 
@@ -35,6 +37,8 @@ const config = environment.config;
     AngularFireAuthModule,
     NoopAnimationsModule,
     MatButtonModule,
+    MatIconModule,
+    DragDropModule,
     FontAwesomeModule
   ],
   providers: [

@@ -1,0 +1,15 @@
+###
+
+PUT http://localhost:8080/note
+Content-Type: application/json
+
+{
+  "id": 1,
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 100,
+  "posY": 100,
+  "priority": 1
+}
+
+###

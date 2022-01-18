@@ -1,9 +1,21 @@
 <div class="content">
-  <h1><span class="logoFont">{{ pinboard?.name }}</span></h1>
+<!--  <h1><span class="logoFont">{{ pinboard?.name }}</span></h1>-->
 
-  <p *ngFor="let note of pinboard?.notes">
-    {{ note.headline }}
-  </p>
+  <div class="notesWrapper">
+    <div class="note" [ngClass]="{'selectedNote': selectedNote == note}"
+         *ngFor="let note of pinboard?.notes"
+         cdkDrag cdkDragBoundary=".notesWrapper" [cdkDragFreeDragPosition]="{x: note.posX, y: note.posY}" (cdkDragEnded)="onDragEnded($event)"
+         (mousedown)="selectNote(note);$event.stopPropagation()">
+
+      <input type="text" name="headline" id="headline" class="noteHeadline" value="{{ note.headline }}" placeholder="Title">
+
+      <button mat-icon-button aria-label="More" class="noteButton">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+      <textarea class="noteText" placeholder="Your Note here..." placeholder="Your note here...">{{ note.text }}</textarea>
+    </div>
+  </div>
 
   <div class="pinboardList">
     <button class="pinboardButton" *ngFor="let pinboard of httpService.user?.pinboards" (click)="selectPinboard(pinboard)">

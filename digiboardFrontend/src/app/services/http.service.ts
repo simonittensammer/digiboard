@@ -28,4 +28,8 @@ export class HttpService {
   getNotesByPinboardId(id): Observable<Array<Note>> {
     return this.http.get<Array<Note>>(this.SERVER_URL + 'pinboard/' + id + '/notes');
   }
+
+  updateNote(note): Observable<Note> {
+    return this.http.put<Note>(this.SERVER_URL + 'note', note);
+  }
 }
