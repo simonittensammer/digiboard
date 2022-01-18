@@ -11,6 +11,19 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:8080/pinboard/1/note
+Content-Type: application/json
+
+{
+  "headline": "First Note",
+  "text": "This is a simple Note",
+  "posX": 10,
+  "posY": 10,
+  "priority": 1
+}
+
+###
+
 GET http://localhost:8080/pinboard
 
 <> 2022-01-18T210050.200.json
@@ -552,12 +565,6 @@ Content-Type: application/json
 GET http://localhost:8080/pinboard
 
 <> 2022-01-06T182247.200.json
-
-###
-
-GET http://localhost:8080/pinboard
-
-<> 2022-01-06T181642.200.json
 
 ###
 

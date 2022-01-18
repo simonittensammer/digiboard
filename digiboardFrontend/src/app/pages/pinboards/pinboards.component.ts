@@ -14,6 +14,9 @@ export class PinboardsComponent implements OnInit {
 
   public pinboard: Pinboard;
   public selectedNote: Note;
+  private newX: number;
+  private newY: number;
+  private preventSelection = false;
 
   constructor(
     private auth: AuthService,
@@ -43,32 +46,43 @@ export class PinboardsComponent implements OnInit {
   }
 
   selectNote(note: Note): void {
-    this.selectedNote = note;
-    console.log(this.selectedNote.id);
+    if (!this.preventSelection) {
+      this.selectedNote = note;
+      console.log(this.selectedNote.id);
+    } else {
+      this.preventSelection = false;
+    }
   }
 
-  // deselectNote(): void {
-  //   this.updateNote(this.selectedNote);
-  //   this.selectedNote = null;
-  // }
+  deselectNote(): void {
+    if (this.selectedNote != null) {
+      this.updateNote(this.selectedNote);
+      this.selectedNote = null;
+    }
+  }
 
   updateNote(note: Note): void {
     console.log('Update Note ' + note?.id);
-    this.httpService.updateNote(this.selectedNote).subscribe(data => {
+    this.httpService.updateNote(note).subscribe(data => {
       this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data2 => {
         this.pinboard.notes = data2;
       });
     });
   }
 
-  onDragEnded(event): void {
+  onDragEnded(event, draggedNote): void {
     const element = event.source.getRootElement();
     const boundingClientRect = element.getBoundingClientRect();
     const parentPosition = this.getPosition(element);
+
+    this.newX = (boundingClientRect.x - parentPosition.left);
+    this.newY = (boundingClientRect.y - parentPosition.top);
     console.log('x: ' + (boundingClientRect.x - parentPosition.left), 'y: ' + (boundingClientRect.y - parentPosition.top));
-    this.selectedNote.posX = (boundingClientRect.x - parentPosition.left);
-    this.selectedNote.posY = (boundingClientRect.y - parentPosition.top);
-    this.updateNote(this.selectedNote);
+    draggedNote.posX = this.newX;
+    draggedNote.posY = this.newY;
+
+    this.updateNote(draggedNote);
+    this.preventSelection = true;
   }
 
   getPosition(el) {

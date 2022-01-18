@@ -1,11 +1,11 @@
 <div class="content">
 <!--  <h1><span class="logoFont">{{ pinboard?.name }}</span></h1>-->
 
-  <div class="notesWrapper">
+  <div class="notesWrapper" (click)="deselectNote()">
     <div class="note" [ngClass]="{'selectedNote': selectedNote == note}"
          *ngFor="let note of pinboard?.notes"
-         cdkDrag cdkDragBoundary=".notesWrapper" [cdkDragFreeDragPosition]="{x: note.posX, y: note.posY}" (cdkDragEnded)="onDragEnded($event)"
-         (mousedown)="selectNote(note);$event.stopPropagation()">
+         cdkDrag cdkDragBoundary=".notesWrapper" [cdkDragFreeDragPosition]="{x: note.posX, y: note.posY}" (cdkDragEnded)="onDragEnded($event, note)"
+         (click)="selectNote(note);$event.stopPropagation()">
 
       <input type="text" name="headline" id="headline" class="noteHeadline" value="{{ note.headline }}" placeholder="Title">
 
