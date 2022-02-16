@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Delete Pinboard?</h2>
+
+<mat-dialog-content>
+  Do you really want to delete this Pinboard? <br>
+  This process cannot be undone.
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-flat-button [mat-dialog-close]="false">Cancel</button>
+  <button mat-flat-button color="warn" [mat-dialog-close]="true">Yes, delete!</button>
+</mat-dialog-actions>

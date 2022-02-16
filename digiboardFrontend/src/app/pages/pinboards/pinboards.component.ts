@@ -4,6 +4,8 @@ import {User} from '../../models/user';
 import {AuthService} from '../../services/auth.service';
 import {Pinboard} from '../../models/pinboard';
 import {Note} from '../../models/note';
+import {MatDialog} from "@angular/material/dialog";
+import {DeletePinboardDialogComponent} from "../../core/delete-pinboard-dialog/delete-pinboard-dialog.component";
 
 @Component({
   selector: 'app-pinboards',
@@ -28,7 +30,8 @@ export class PinboardsComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    public httpService: HttpService
+    public httpService: HttpService,
+    public dialog: MatDialog
   ) {
   }
 
@@ -159,5 +162,13 @@ export class PinboardsComponent implements OnInit {
   setPriority(priority: number): void {
     this.updatePriority = priority;
     this.deselectNote();
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DeletePinboardDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }

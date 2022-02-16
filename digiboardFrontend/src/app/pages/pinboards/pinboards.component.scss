@@ -75,8 +75,8 @@
   right: 0;
   top: 0;
   padding-top: 100px;
-  width: 12.5vw;
-  min-width: 150px;
+  width: 14vw;
+  min-width: 200px;
   z-index: 100;
 }
 
@@ -95,6 +95,9 @@
   text-align: center;
   outline: none;
 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
   transition: all .1s ease;
 }
 
@@ -104,6 +107,11 @@
 
 .pinboardButton:active {
   box-shadow: 0 5px 10px #aaa;
+}
+
+.pinboardButtonName {
+  grid-column: 1 / 5;
+  line-height: 45px;
 }
 
 .deleteShadow {

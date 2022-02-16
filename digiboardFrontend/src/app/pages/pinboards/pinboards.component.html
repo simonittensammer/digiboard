@@ -40,7 +40,13 @@
   <div class="pinboardList">
     <button class="pinboardButton" *ngFor="let pinboard of httpService.user?.pinboards"
             (click)="selectPinboard(pinboard)">
-      {{ pinboard.name }}
+      <span class="pinboardButtonName">
+        {{ pinboard.name }}
+      </span>
+
+      <button class="deletePinboardButton" mat-icon-button aria-label="deletePinboard" class="deletePinboardButton" (click)="openDialog()">
+        <mat-icon>delete_forever</mat-icon>
+      </button>
     </button>
 
     <input class="pinboardButton" type="text" name="newPinboard" placeholder="Create new"

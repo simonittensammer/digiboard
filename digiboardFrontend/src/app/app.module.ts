@@ -20,6 +20,8 @@ import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatIconModule} from "@angular/material/icon";
 import {FormsModule} from "@angular/forms";
 import {MatMenuModule} from "@angular/material/menu";
+import {MatDialogModule} from "@angular/material/dialog";
+import { DeletePinboardDialogComponent } from './core/delete-pinboard-dialog/delete-pinboard-dialog.component';
 
 const config = environment.config;
 
@@ -28,7 +30,8 @@ const config = environment.config;
     AppComponent,
     HeaderComponent,
     PinboardsComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    DeletePinboardDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ const config = environment.config;
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatDialogModule,
     DragDropModule,
     FontAwesomeModule,
     FormsModule
