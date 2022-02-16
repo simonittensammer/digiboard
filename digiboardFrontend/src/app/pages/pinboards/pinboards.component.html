@@ -3,7 +3,7 @@
 
   <div class="notesWrapper" (click)="deselectNote()" (dblclick)="createNote($event)">
     <div class="note" [ngClass]="{'selectedNote': selectedNote == note}"
-         *ngFor="let note of pinboard?.notes"
+         *ngFor="let note of currentPinboard?.notes"
          cdkDrag cdkDragBoundary=".notesWrapper" [cdkDragFreeDragPosition]="{x: note.posX, y: note.posY}"
          (cdkDragEnded)="onDragEnded($event, note)"
          (click)="selectNote(note);$event.stopPropagation()">
@@ -39,6 +39,7 @@
 
   <div class="pinboardList">
     <button class="pinboardButton" *ngFor="let pinboard of httpService.user?.pinboards"
+            [ngClass]="{'selected': pinboard.id == currentPinboard?.id}"
             (click)="selectPinboard(pinboard)">
       <span class="pinboardButtonName">
         {{ pinboard.name }}

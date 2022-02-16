@@ -14,7 +14,7 @@ import {DeletePinboardDialogComponent} from "../../core/delete-pinboard-dialog/d
 })
 export class PinboardsComponent implements OnInit {
 
-  public pinboard: Pinboard;
+  public currentPinboard: Pinboard;
   public selectedNote: Note;
   private newX: number;
   private newY: number;
@@ -50,9 +50,9 @@ export class PinboardsComponent implements OnInit {
   }
 
   selectPinboard(selectedPinboard): void {
-    this.pinboard = selectedPinboard;
-    this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data => {
-      this.pinboard.notes = data;
+    this.currentPinboard = selectedPinboard;
+    this.httpService.getNotesByPinboardId(this.currentPinboard.id).subscribe(data => {
+      this.currentPinboard.notes = data;
     });
   }
 
@@ -87,8 +87,8 @@ export class PinboardsComponent implements OnInit {
     }
 
     this.httpService.updateNote(note).subscribe(data => {
-      this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data2 => {
-        this.pinboard.notes = data2;
+      this.httpService.getNotesByPinboardId(this.currentPinboard.id).subscribe(data2 => {
+        this.currentPinboard.notes = data2;
         this.updateHeadline = '';
         this.updateText = '';
         this.updatePriority = 0;
@@ -127,7 +127,7 @@ export class PinboardsComponent implements OnInit {
     this.httpService.createPinboard(newPinboard).subscribe(data => {
       this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
         this.httpService.user.pinboards = data2;
-        this.pinboard = data;
+        this.currentPinboard = data;
         this.newPinboardName = '';
       });
     });
@@ -145,9 +145,9 @@ export class PinboardsComponent implements OnInit {
       0
     );
 
-    this.httpService.addNote(this.pinboard.id, newNote).subscribe(data1 => {
-      this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data2 => {
-        this.pinboard.notes = data2;
+    this.httpService.addNote(this.currentPinboard.id, newNote).subscribe(data1 => {
+      this.httpService.getNotesByPinboardId(this.currentPinboard.id).subscribe(data2 => {
+        this.currentPinboard.notes = data2;
       });
     });
   }

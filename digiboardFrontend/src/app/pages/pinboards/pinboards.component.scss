@@ -75,8 +75,8 @@
   right: 0;
   top: 0;
   padding-top: 100px;
-  width: 14vw;
-  min-width: 200px;
+  width: 13vw;
+  min-width: 175px;
   z-index: 100;
 }
 
@@ -112,6 +112,12 @@
 .pinboardButtonName {
   grid-column: 1 / 5;
   line-height: 45px;
+}
+
+.selected {
+  width: 90%;
+  margin-left: 0;
+  font-weight: bold;
 }
 
 .deleteShadow {
