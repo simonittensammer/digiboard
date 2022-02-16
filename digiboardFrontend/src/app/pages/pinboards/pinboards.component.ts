@@ -22,8 +22,8 @@ export class PinboardsComponent implements OnInit {
   newNoteText: string;
   newNoteX: number;
   newNoteY: number;
-  updateHeadline: string;
-  updateText: string;
+  updateHeadline = '';
+  updateText = '';
 
   constructor(
     private auth: AuthService,
