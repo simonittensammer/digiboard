@@ -10,9 +10,28 @@
 
       <input type="text" name="headline" class="noteHeadline" value="{{ note.headline }}" placeholder="Title" (keyup)="setUpdateHeadline($event)">
 
-      <button mat-icon-button aria-label="More" class="noteButton">
+      <button mat-icon-button aria-label="More" class="noteButton" [matMenuTriggerFor]="noteMenu">
         <mat-icon>more_vert</mat-icon>
       </button>
+
+      <mat-menu #noteMenu="matMenu" xPosition="after" yPosition="below">
+        <button mat-menu-item [matMenuTriggerFor]="priorityMenu">
+          <mat-icon>priority_high</mat-icon>
+          Priority
+        </button>
+        <button mat-menu-item>
+          <mat-icon>delete_forever</mat-icon>
+          Delete
+        </button>
+      </mat-menu>
+
+      <mat-menu #priorityMenu="matMenu" xPosition="after" yPosition="below">
+        <button mat-menu-item (click)="setPriority(1)">Very Important</button>
+        <button mat-menu-item (click)="setPriority(2)">Rather Important</button>
+        <button mat-menu-item (click)="setPriority(3)">Important</button>
+        <button mat-menu-item (click)="setPriority(4)">Not so Important</button>
+        <button mat-menu-item (click)="setPriority(5)">Not Important</button>
+      </mat-menu>
 
       <textarea class="noteText" placeholder="Your note here..." (keyup)="setUpdateText($event)">{{ note.text }}</textarea>
     </div>

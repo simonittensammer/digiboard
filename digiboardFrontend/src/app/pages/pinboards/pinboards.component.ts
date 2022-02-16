@@ -24,6 +24,7 @@ export class PinboardsComponent implements OnInit {
   newNoteY: number;
   updateHeadline = '';
   updateText = '';
+  updatePriority = 0;
 
   constructor(
     private auth: AuthService,
@@ -55,7 +56,7 @@ export class PinboardsComponent implements OnInit {
   selectNote(note: Note): void {
     if (!this.preventSelection) {
       this.selectedNote = note;
-      console.log(this.selectedNote.id);
+      console.log('Select Note ' + this.selectedNote.id);
     } else {
       this.preventSelection = false;
     }
@@ -78,11 +79,16 @@ export class PinboardsComponent implements OnInit {
       note.text = this.updateText;
     }
 
+    if (this.updatePriority !== 0) {
+      note.priority = this.updatePriority;
+    }
+
     this.httpService.updateNote(note).subscribe(data => {
       this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data2 => {
         this.pinboard.notes = data2;
         this.updateHeadline = '';
         this.updateText = '';
+        this.updatePriority = 0;
       });
     });
   }
@@ -148,5 +154,10 @@ export class PinboardsComponent implements OnInit {
   }
   setUpdateText(event): void {
     this.updateText = event.target.value;
+  }
+
+  setPriority(priority: number): void {
+    this.updatePriority = priority;
+    this.deselectNote();
   }
 }

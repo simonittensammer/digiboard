@@ -19,6 +19,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatIconModule} from "@angular/material/icon";
 import {FormsModule} from "@angular/forms";
+import {MatMenuModule} from "@angular/material/menu";
 
 const config = environment.config;
 
@@ -39,6 +40,7 @@ const config = environment.config;
     NoopAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
     DragDropModule,
     FontAwesomeModule,
     FormsModule
