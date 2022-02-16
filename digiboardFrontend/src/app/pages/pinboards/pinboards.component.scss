@@ -105,3 +105,34 @@
 .pinboardButton:active {
   box-shadow: 0 5px 10px #aaa;
 }
+
+.deleteShadow {
+  width: 4vw;
+  height: 4vw;
+  position: absolute;
+  top: 100vh;
+  left: 100vw;
+  transform: translate(-150%, -150%);
+
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 0 15px #aaa;
+  //box-shadow: 0 0 100px 50px #c2185b;
+
+  transition: all .3s ease;
+}
+
+//.deleteShadow:hover {
+  //width: 5vw;
+  //height: 5vw;
+//  box-shadow: 0 0 50px #aaa;
+//}
+
+.deleteIcon {
+  font-size: 2.5vw;
+  float: left;
+  width: 100%;
+  text-align: center;
+  line-height: 4vw;
+  color: #333;
+}
