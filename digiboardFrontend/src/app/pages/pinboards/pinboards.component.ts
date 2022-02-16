@@ -18,6 +18,12 @@ export class PinboardsComponent implements OnInit {
   private newY: number;
   private preventSelection = false;
   newPinboardName: string;
+  newNoteHeadline: string;
+  newNoteText: string;
+  newNoteX: number;
+  newNoteY: number;
+  updateHeadline: string;
+  updateText: string;
 
   constructor(
     private auth: AuthService,
@@ -64,9 +70,19 @@ export class PinboardsComponent implements OnInit {
 
   updateNote(note: Note): void {
     console.log('Update Note ' + note?.id);
+    if (this.updateHeadline !== '') {
+      note.headline = this.updateHeadline;
+    }
+
+    if (this.updateText !== '') {
+      note.text = this.updateText;
+    }
+
     this.httpService.updateNote(note).subscribe(data => {
       this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data2 => {
         this.pinboard.notes = data2;
+        this.updateHeadline = '';
+        this.updateText = '';
       });
     });
   }
@@ -106,5 +122,31 @@ export class PinboardsComponent implements OnInit {
         this.newPinboardName = '';
       });
     });
+  }
+
+  createNote(event): void {
+    this.newNoteX = event.clientX;
+    this.newNoteY = event.clientY;
+
+    const newNote = new Note(
+      this.newNoteHeadline,
+      this.newNoteText,
+      this.newNoteX,
+      this.newNoteY,
+      0
+    );
+
+    this.httpService.addNote(this.pinboard.id, newNote).subscribe(data1 => {
+      this.httpService.getNotesByPinboardId(this.pinboard.id).subscribe(data2 => {
+        this.pinboard.notes = data2;
+      });
+    });
+  }
+
+  setUpdateHeadline(event): void {
+    this.updateHeadline = event.target.value;
+  }
+  setUpdateText(event): void {
+    this.updateText = event.target.value;
   }
 }
