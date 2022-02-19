@@ -20,10 +20,6 @@ export class PinboardsComponent implements OnInit {
   private newY: number;
   private preventSelection = false;
   newPinboardName: string;
-  newNoteHeadline: string;
-  newNoteText: string;
-  newNoteX: number;
-  newNoteY: number;
   updateHeadline = '';
   updateText = '';
   updatePriority = 0;
@@ -122,27 +118,35 @@ export class PinboardsComponent implements OnInit {
     return {top: y, left: x};
   }
 
-  createPinboard(): void {
-    const newPinboard = new Pinboard(this.newPinboardName);
+  createPinboard(newPinboardName: string): void {
+    const newPinboard = new Pinboard(newPinboardName);
     this.httpService.createPinboard(newPinboard).subscribe(data => {
       this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
         this.httpService.user.pinboards = data2;
         this.selectPinboard(this.httpService.user.pinboards[this.httpService.user.pinboards.length - 1]);
+        this.createNote(
+          newPinboardName,
+          'Welcome to your new Pinboard!',
+          window.innerWidth / 100 * 42.5,
+          window.innerHeight / 4,
+          0
+        );
         this.newPinboardName = '';
       });
     });
   }
 
-  createNote(event): void {
-    this.newNoteX = event.clientX;
-    this.newNoteY = event.clientY;
+  createNoteByEvent(event): void {
+    this.createNote('', '', event.clientX, event.clientY, 0);
+  }
 
+  createNote(headline: string, text: string, posX: number, posY: number, priority: number): void {
     const newNote = new Note(
-      this.newNoteHeadline,
-      this.newNoteText,
-      this.newNoteX,
-      this.newNoteY,
-      0
+      headline,
+      text,
+      posX,
+      posY,
+      priority
     );
 
     this.httpService.addNote(this.currentPinboard.id, newNote).subscribe(data1 => {
