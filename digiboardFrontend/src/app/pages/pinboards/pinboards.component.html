@@ -20,6 +20,10 @@
           Priority
         </button>
         <button mat-menu-item>
+          <mat-icon>archive</mat-icon>
+          Archive
+        </button>
+        <button mat-menu-item>
           <mat-icon>delete_forever</mat-icon>
           Delete
         </button>
@@ -45,7 +49,7 @@
         {{ pinboard.name }}
       </span>
 
-      <button class="deletePinboardButton" mat-icon-button aria-label="deletePinboard" class="deletePinboardButton" (click)="openDialog()">
+      <button class="deletePinboardButton" mat-icon-button aria-label="deletePinboard" (click)="openDialog()">
         <mat-icon>delete_forever</mat-icon>
       </button>
     </button>
