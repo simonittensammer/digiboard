@@ -127,7 +127,7 @@ export class PinboardsComponent implements OnInit {
     this.httpService.createPinboard(newPinboard).subscribe(data => {
       this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
         this.httpService.user.pinboards = data2;
-        this.currentPinboard = data;
+        this.selectPinboard(this.httpService.user.pinboards[this.httpService.user.pinboards.length - 1]);
         this.newPinboardName = '';
       });
     });
