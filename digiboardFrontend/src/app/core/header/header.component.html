@@ -22,4 +22,6 @@
   <div class="picContainer">
     <img [src]="httpService.user?.photoURL">
   </div>
+
+  <span class="nameContainer">{{ httpService.user?.displayName }}</span>
 </ng-template>
