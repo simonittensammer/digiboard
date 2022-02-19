@@ -1,6 +1,8 @@
 package at.htl.boundary;
 
+import at.htl.control.PinboardRepository;
 import at.htl.control.UserRepository;
+import at.htl.entity.Note;
 import at.htl.entity.Pinboard;
 import at.htl.entity.User;
 
@@ -22,6 +24,9 @@ public class UserEndpoint {
 
     @Inject
     UserRepository ur;
+
+    @Inject
+    PinboardRepository pr;
 
     @GET
     public List<User> getAll() {
@@ -78,5 +83,21 @@ public class UserEndpoint {
         User user = ur.find("uid", id).firstResult();
         user.addPinboard(pinboard);
         return Response.ok().build();
+    }
+
+    @DELETE
+    @Path("{id}/deletePinboard/{pinboardId}")
+    public Response deletePinboard(@PathParam("id") String id, @PathParam("pinboardId") Long pinboardId) {
+        User user = ur.find("uid", id).firstResult();
+        Pinboard pinboard = pr.findById(pinboardId);
+
+        user.getPinboards().remove(pinboard);
+
+        if (pinboard != null) {
+            pr.delete(pinboard);
+            return Response.ok(pinboard).build();
+        }
+
+        return Response.status(406).entity("pinboard does not exist").build();
     }
 }

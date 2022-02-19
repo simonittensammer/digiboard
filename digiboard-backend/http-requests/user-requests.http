@@ -45,3 +45,7 @@ Content-Type: application/json
 GET http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/pinboards
 
 ###
+
+DELETE http://localhost:8080/user/XNVU0NfasfW6Iyehn5nXixODyHI2/deletePinboard/1
+
+###

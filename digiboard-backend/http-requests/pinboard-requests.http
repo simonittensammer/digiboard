@@ -26,3 +26,7 @@ GET http://localhost:8080/pinboard/1/notes
 DELETE http://localhost:8080/pinboard/1/deleteNote/1
 
 ###
+
+DELETE http://localhost:8080/pinboard/1
+
+###
