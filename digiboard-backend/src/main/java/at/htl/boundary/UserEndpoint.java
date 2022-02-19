@@ -64,13 +64,9 @@ public class UserEndpoint {
                     loginUser.getDisplayName()
             );
 
-            Pinboard pinboard = new Pinboard("My Notes");
-
-            newUser.addPinboard(pinboard);
             ur.persist(newUser);
 
             return Response.ok(newUser).build();
-
         }
 
         return Response.ok(ur.find("uid", loginUser.getUid()).firstResult()).build();

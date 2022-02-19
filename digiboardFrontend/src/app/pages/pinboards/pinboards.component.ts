@@ -38,6 +38,9 @@ export class PinboardsComponent implements OnInit {
           this.httpService.getPinboardsByUserId(data2.uid).subscribe(data3 => {
             data2.pinboards = data3;
             this.httpService.user = data2;
+            if (data3.length === 0) {
+              this.createPinboard('My Pinboard');
+            }
             this.selectPinboard(this.httpService.user.pinboards[0]);
           });
         });
@@ -190,6 +193,9 @@ export class PinboardsComponent implements OnInit {
     this.httpService.deletePinboard(this.httpService.user.uid, id).subscribe(data => {
       this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
         this.httpService.user.pinboards = data2;
+        if (data2.length === 0) {
+          this.createPinboard('My Pinboard');
+        }
         this.selectPinboard(this.httpService.user.pinboards[0]);
       });
     });
