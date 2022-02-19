@@ -171,4 +171,12 @@ export class PinboardsComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
+
+  deleteNote(id: number): void {
+    this.httpService.deleteNote(this.currentPinboard.id, id).subscribe(data => {
+      this.httpService.getNotesByPinboardId(this.currentPinboard.id).subscribe(data2 => {
+        this.currentPinboard.notes = data2;
+      });
+    });
+  }
 }

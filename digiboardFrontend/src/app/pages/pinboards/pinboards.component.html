@@ -23,7 +23,7 @@
           <mat-icon>archive</mat-icon>
           Archive
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="deleteNote(note.id)">
           <mat-icon>delete_forever</mat-icon>
           Delete
         </button>

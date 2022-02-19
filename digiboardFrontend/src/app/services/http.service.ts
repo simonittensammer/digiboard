@@ -40,4 +40,12 @@ export class HttpService {
   addNote(pinboardId, note): Observable<Note> {
     return this.http.post<Note>(this.SERVER_URL + 'pinboard/' + pinboardId + '/note', note);
   }
+
+  deleteNote(pinboardId: number, noteId: number) {
+    return this.http.delete(this.SERVER_URL + '/pinboard/' + pinboardId + '/deleteNote/' + noteId);
+  }
+
+  deletePinboard(userId: number, pinboardId: number) {
+    return this.http.delete(this.SERVER_URL + '/user/' + userId + '/deletePinboard/' + pinboardId);
+  }
 }
