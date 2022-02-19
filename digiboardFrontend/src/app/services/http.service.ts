@@ -45,7 +45,7 @@ export class HttpService {
     return this.http.delete(this.SERVER_URL + '/pinboard/' + pinboardId + '/deleteNote/' + noteId);
   }
 
-  deletePinboard(userId: number, pinboardId: number) {
+  deletePinboard(userId: string, pinboardId: number) {
     return this.http.delete(this.SERVER_URL + '/user/' + userId + '/deletePinboard/' + pinboardId);
   }
 }

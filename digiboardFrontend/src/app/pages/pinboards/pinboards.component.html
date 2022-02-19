@@ -49,7 +49,7 @@
         {{ pinboard.name }}
       </span>
 
-      <button class="deletePinboardButton" mat-icon-button aria-label="deletePinboard" (click)="openDialog()">
+      <button class="deletePinboardButton" mat-icon-button aria-label="deletePinboard" (click)="openDialog(pinboard.id)">
         <mat-icon>delete_forever</mat-icon>
       </button>
     </button>

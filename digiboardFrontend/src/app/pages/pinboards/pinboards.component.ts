@@ -164,11 +164,13 @@ export class PinboardsComponent implements OnInit {
     this.deselectNote();
   }
 
-  openDialog(): void {
+  openDialog(id: number): void {
     const dialogRef = this.dialog.open(DeletePinboardDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if (result) {
+        this.deletePinboard(id);
+      }
     });
   }
 
@@ -176,6 +178,15 @@ export class PinboardsComponent implements OnInit {
     this.httpService.deleteNote(this.currentPinboard.id, id).subscribe(data => {
       this.httpService.getNotesByPinboardId(this.currentPinboard.id).subscribe(data2 => {
         this.currentPinboard.notes = data2;
+      });
+    });
+  }
+
+  deletePinboard(id: number): void {
+    this.httpService.deletePinboard(this.httpService.user.uid, id).subscribe(data => {
+      this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
+        this.httpService.user.pinboards = data2;
+        this.selectPinboard(this.httpService.user.pinboards[0]);
       });
     });
   }
