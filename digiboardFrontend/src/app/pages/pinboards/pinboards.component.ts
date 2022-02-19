@@ -122,21 +122,23 @@ export class PinboardsComponent implements OnInit {
   }
 
   createPinboard(newPinboardName: string): void {
-    const newPinboard = new Pinboard(newPinboardName);
-    this.httpService.createPinboard(newPinboard).subscribe(data => {
-      this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
-        this.httpService.user.pinboards = data2;
-        this.selectPinboard(this.httpService.user.pinboards[this.httpService.user.pinboards.length - 1]);
-        this.createNote(
-          newPinboardName,
-          'Welcome to your new Pinboard!',
-          window.innerWidth / 100 * 42.5,
-          window.innerHeight / 4,
-          0
-        );
-        this.newPinboardName = '';
+    if (newPinboardName?.length > 0) {
+      const newPinboard = new Pinboard(newPinboardName);
+      this.httpService.createPinboard(newPinboard).subscribe(data => {
+        this.httpService.getPinboardsByUserId(this.httpService.user.uid).subscribe(data2 => {
+          this.httpService.user.pinboards = data2;
+          this.selectPinboard(this.httpService.user.pinboards[this.httpService.user.pinboards.length - 1]);
+          this.createNote(
+            newPinboardName,
+            'Welcome to your new Pinboard!',
+            window.innerWidth / 100 * 42.5,
+            window.innerHeight / 4,
+            0
+          );
+          this.newPinboardName = '';
+        });
       });
-    });
+    }
   }
 
   createNoteByEvent(event): void {
