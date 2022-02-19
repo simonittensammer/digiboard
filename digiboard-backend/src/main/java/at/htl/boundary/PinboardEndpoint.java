@@ -1,5 +1,6 @@
 package at.htl.boundary;
 
+import at.htl.control.NoteRepository;
 import at.htl.control.PinboardRepository;
 import at.htl.control.UserRepository;
 import at.htl.entity.Note;
@@ -25,6 +26,9 @@ public class PinboardEndpoint {
     @Inject
     PinboardRepository pr;
 
+    @Inject
+    NoteRepository nr;
+
     @GET
     public List<Pinboard> getAll() {
         return pr.listAll();
@@ -49,5 +53,21 @@ public class PinboardEndpoint {
         Pinboard pinboard = pr.findById(id);
         pinboard.addNote(note);
         return Response.ok().build();
+    }
+
+    @DELETE
+    @Path("{id}/deleteNote/{noteId}")
+    public Response deleteNote(@PathParam("id") Long id, @PathParam("noteId") Long noteId) {
+        Pinboard pinboard = pr.findById(id);
+        Note note = nr.findById(noteId);
+
+        pinboard.getNotes().remove(note);
+
+        if (note != null) {
+            nr.delete(note);
+            return Response.ok(note).build();
+        }
+
+        return Response.status(406).entity("note does not exist").build();
     }
 }

@@ -1,3 +1,23 @@
+DELETE http://localhost:8080/pinboard/1/deleteNote/1
+
+<> 2022-02-19T223616.200.json
+
+###
+
+GET http://localhost:8080/pinboard/0
+
+###
+
+GET http://localhost:8080/pinboard/1
+
+###
+
+DELETE http://localhost:8080/note/delete/1
+
+<> 2022-02-19T223228.500.html
+
+###
+
 POST http://localhost:8080/pinboard/1/note
 Content-Type: application/json
 
@@ -558,30 +578,6 @@ GET http://localhost:8080/pinboard/1
 GET http://localhost:8080/pinboard/1
 
 <> 2022-01-06T182402.200.json
-
-###
-
-GET http://localhost:8080/pinboard/1
-
-<> 2022-01-06T182356.200.json
-
-###
-
-GET http://localhost:8080/pinboard/2
-
-<> 2022-01-06T182352.200.json
-
-###
-
-GET http://localhost:8080/pinboard/1
-
-<> 2022-01-06T182347.200.json
-
-###
-
-GET http://localhost:8080/pinboard/1
-
-<> 2022-01-06T182345.200.json
 
 ###
 
